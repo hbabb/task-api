@@ -53,7 +53,9 @@
     "postcss"
   ],
   "cSpell.words": [
+    "AUTOINCREMENT",
     "libsql",
-    "treeify"
+    "treeify",
+    "turso"
   ]
 }

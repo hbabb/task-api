@@ -3,12 +3,12 @@ import { defineConfig } from "drizzle-kit";
 import env from "@/env";
 
 export default defineConfig({
+  out: ".drizzle",
   schema: "./src/db/schema.ts",
-  out: "./src/db/migrations",
+  casing: "camelCase",
   dialect: "turso",
-  casing: "snake_case",
   dbCredentials: {
     url: env.TURSO_DATABASE_URL,
-    authToken: env.TURSO_AUTH_TOKEN,
+    authToken: env.NODE_ENV === "development" ? undefined : env.TURSO_AUTH_TOKEN,
   },
 });

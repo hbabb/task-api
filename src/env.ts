@@ -15,6 +15,7 @@ const EnvSchema = z.object({
   NODE_ENV: z.string().default("development"),
   PORT: z.coerce.number().default(9999),
   LOG_LEVEL: z.enum(["fatal", "error", "warn", "info", "debug", "trace", "silent"]),
+  LOCAL_DATABASE_URL: z.url(),
   TURSO_DATABASE_URL: z.url(),
   TURSO_AUTH_TOKEN: z.string().optional(),
 }).superRefine((input, ctx) => {

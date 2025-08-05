@@ -72,7 +72,7 @@ export const patch: AppRouteHandler<PatchRoute> = async (c) => {
   if (!task) {
     return c.json(
       {
-        message: HttpStatusCodes.NOT_FOUND,
+        message: HttpStatusPhrases.NOT_FOUND,
       },
       HttpStatusCodes.NOT_FOUND,
     );

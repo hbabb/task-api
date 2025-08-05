@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "tsx watch src/index.ts",
+    "dev:remote": "cross-env NODE_ENV=production pnpm run dev",
     "dev:db": "turso dev --db-file local.db",
     "dev:full": "concurrently \"pnpm run dev\" \"pnpm run dev:db\"",
     "build": "tsc && tsc-alias",

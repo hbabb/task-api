@@ -5,7 +5,7 @@ import env from "@/env";
 
 const db = drizzle({
   connection: {
-    url: env.TURSO_DATABASE_URL,
+    url: env.NODE_ENV === "production" ? env.TURSO_DATABASE_URL : env.LOCAL_DATABASE_URL,
     authToken: env.NODE_ENV === "development" ? undefined : env.TURSO_AUTH_TOKEN,
   },
   casing: "camelCase",

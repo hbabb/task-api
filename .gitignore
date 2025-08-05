@@ -1,6 +1,7 @@
 # dev
 .yarn/
 !.yarn/releases
+.vscode/*
 !.vscode/launch.json
 !.vscode/*.code-snippets
 .idea/workspace.xml
@@ -28,3 +29,8 @@ lerna-debug.log*
 
 # local database
 local.db*
+test.db 
+.vercel
+dist
+
+.dev.vars
